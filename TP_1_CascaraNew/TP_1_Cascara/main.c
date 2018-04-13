@@ -27,14 +27,14 @@ int main()
         {//inicio switch
             case 1:
                 printf("Ingrese el primer numero: ");
-                scanf("%f", &num1);
                 fflush(stdin);
+                scanf("%f", &num1);
                 break;
 
             case 2:
                 printf("Ingrese el segundo numero: ");
-                scanf("%f", &num2);
                 fflush(stdin);
+                scanf("%f", &num2);
                 break;
             case 3:
                 result = sum(num1, num2);
@@ -51,8 +51,8 @@ int main()
                 while(num2 <= 0)
                 {
                     printf("ingrese un numero positivo\n");
-                    scanf("%f",&num2);
                     fflush(stdin);
+                    scanf("%f",&num2);
                 }
                 result = division(num1,num2);
                 printf("la division da %f\n", result);
@@ -67,11 +67,18 @@ int main()
                 while(num1 < 0)
                 {
                     printf("ingrese un numero positivo\n");
-                    scanf("%f",&num1);
                     fflush(stdin);
+                    scanf("%f",&num1);
                 }
                 result = factoring(num1);
-                printf("resultado del factoreo %f\n", result);
+                while(result <= 0)
+                {
+                    printf("Por favor ingrese un numero menor \n");
+                    fflush(stdin);
+                    scanf("%f",&num1);
+                    result = factoring(num1);
+                }
+                printf("resultado del factoreo %d\n", (int)result);
                 printf("\n");
                 break;
             case 8:
@@ -90,10 +97,17 @@ int main()
                 while(num1 < 0)
                 {
                     printf("ingrese un numero positivo\n");
-                    scanf("%f",&num1);
                     fflush(stdin);
+                    scanf("%f",&num1);
                 }
                 result = factoring(num1);
+                while(result <= 0)
+                {
+                    printf("Por favor ingrese un numero menor \n");
+                    fflush(stdin);
+                    scanf("%f",&num1);
+                    result = factoring(num1);
+                }
                 printf("resultado del factoreo %f\n", result);
                 printf("\n");
                 break;

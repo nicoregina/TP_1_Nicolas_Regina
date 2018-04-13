@@ -50,7 +50,7 @@ float division(float num1, float num2)
 *   \return devuelve el parametro factorizado
 */
 
-int factoring(float num1)
+int factoring(int num1)
 {
     int result = num1;
     int i;
