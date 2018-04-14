@@ -48,15 +48,16 @@ int main()
                 printf("\n");
                 break;
             case 5:
-                while(num2 <= 0)
+                if(num2 != 0)
                 {
-                    printf("ingrese un numero positivo\n");
-                    fflush(stdin);
-                    scanf("%f",&num2);
+                    result = division(num1,num2);
+                    printf("la division da %f\n", result);
+                    printf("\n");
                 }
-                result = division(num1,num2);
-                printf("la division da %f\n", result);
-                printf("\n");
+                else
+                {
+                    printf("Ingrese el numero 2 diferente: ");
+                }
                 break;
             case 6:
                 result = multiply(num1,num2);
@@ -91,9 +92,17 @@ int main()
                 result = multiply(num1,num2);
                 printf("resultado multiplicacion %f\n", result);
                 printf("\n");
-                result = division(num1,num2);
-                printf("resultado division %f\n", result);
-                printf("\n");
+                if(num2 != 0)
+                {
+                    result = division(num1,num2);
+                    printf("la division da %f\n", result);
+                    printf("\n");
+                }
+                else
+                {
+                    printf("Ingrese el numero 2 diferente ");
+                    printf("\n");
+                }
                 while(num1 < 0)
                 {
                     printf("ingrese un numero positivo\n");
